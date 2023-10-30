@@ -1,6 +1,6 @@
 # Face-Detection-Door-Lock
 
-<img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/LockView.jpg" width="33%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/MainView.jpg" width="33%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/ServerView.jpg" width="33%" height="33%">
+<img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/LockView.jpg" width="25%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/MainView.jpg" width="25%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/ServerView.jpg" width="25%" height="33%">
 
 ## Component List
 
