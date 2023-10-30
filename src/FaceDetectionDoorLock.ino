@@ -24,19 +24,10 @@ const char* ssid = "******";
 const char* password = "*******";
 
 int relayPin = 2; 
-int ledPin = 4;
-int wLedPin = 16; 
-bool ledState = false; 
-int motionSensorPin = 12; 
 bool faceFound = false; 
 bool relayState = false; 
-int sensorVal = 0; 
 unsigned long startTime = 0; 
 unsigned long ledStartTime = 0; 
-
-const int freq = 1000;
-const int ledChannel = 4;
-const int lResolution = 8;
 
 void startCameraServer();
 
@@ -68,13 +59,6 @@ void setup() {
   config.pixel_format = PIXFORMAT_JPEG;
 
   pinMode(relayPin, OUTPUT); 
-  //pinMode(ledPin, OUTPUT);
-  pinMode(motionSensorPin, INPUT); 
-  pinMode(wLedPin, OUTPUT); 
-
-  //ledcSetup(ledChannel, freq, lResolution);
-
-  //ledcAttachPin(ledPin, ledChannel);
   
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
@@ -133,17 +117,6 @@ void setup() {
 
 void loop() {
 
-  sensorVal = digitalRead(motionSensorPin);
-
-  if(sensorVal == HIGH && !ledState) {
-    ledState = true; 
-    ledStartTime = millis(); 
-  }
-
-  if(ledState && millis() - ledStartTime >= 30000) {
-    ledState = false; 
-  }
-
   if(faceFound && !relayState) {
     relayState = true; 
     faceFound = false; 
@@ -158,14 +131,6 @@ void loop() {
     digitalWrite(relayPin, HIGH); 
   } else {
     digitalWrite(relayPin, LOW); 
-  }
-
-  if(ledState) {
-    //ledcWrite(ledChannel, 4); 
-    digitalWrite(wLedPin, HIGH); 
-  } else {
-    //ledcWrite(ledChannel, 0); 
-    digitalWrite(wLedPin, LOW); 
   }
 
   delay(5);
