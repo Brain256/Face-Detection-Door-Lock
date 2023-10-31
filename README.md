@@ -15,10 +15,14 @@
 
 ## Description
 
-This door lock is activated by face detection on the ESP-32 CAM module. The program uses the ESP-32 camera web server example as a base and uses its face-detection feature to activate a relay that will activate a 12V solenoid door lock, thus unlocking the door. 
+This door lock is activated by face detection on the ESP-32 CAM module. The program uses the ESP-32 camera web server example as a base and uses its face-recognition feature to activate a relay that will activate a 12V solenoid door lock, thus unlocking the door. 
 
-Whenever a face is detected in the program, the 5V relay will be activated, connecting the circuit between the 12V power supply and the 12V solenoid door lock will retract, unlocking the door. After 5 seconds have passed, the relay will deactivate and the door lock will extend out again. 
+The face detection is done through a web server interface hosted on the ESP-32 CAM module, which is accessed through my phone. On the web server, the face recognition option is used to enroll faces that will be able to unlock the door lock. This way only someone who has enrolled their face is able to unlock the door with face recognition. 
+
+Whenever an enrolled face is detected in the program, the 5V relay will be activated, connecting the circuit between the 12V power supply and the 12V solenoid door lock will retract, unlocking the door. After 5 seconds have passed, the relay will deactivate and the door lock will extend out again. 
 
 The ESP-32 microcontroller and the 5V Relay are both powered with 5V from a breadboard power supply module that takes a 9V power supply and turns it into 5V. 
 
 The solenoid lock and main breadboard are mounted on a 3D-printed base taped to the door. 
+
+
