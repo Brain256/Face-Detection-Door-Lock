@@ -2,6 +2,10 @@
 
 <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/LockView.jpg" width="25%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/MainView.jpg" width="25%" height="33%"> <img src="https://github.com/Brain256/Face-Detection-Door-Lock/blob/main/photos/ServerView.jpg" width="25%" height="33%">
 
+## Youtube Video Link
+
+https://www.youtube.com/watch?v=OrecraZhADc
+
 ## Component List
 
 * 12V Solenoid Door Lock
